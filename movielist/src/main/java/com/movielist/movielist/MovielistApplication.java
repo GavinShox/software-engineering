@@ -8,6 +8,9 @@ public class MovielistApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(MovielistApplication.class, args);
+		
+		System.out.println("Test");
+		
 	}
 
 }
