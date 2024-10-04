@@ -14,9 +14,9 @@ public class User {
 	private String firstname;
 	private String lastname;
 
-//	@JsonIgnore
-//	@OneToMany(cascade = CascadeType.ALL, mappedBy = "User")
-//	private List<Movies> movies;
+	@JsonIgnore
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+	private List<Movie> movies;
 
 	public User() { super(); }
 
@@ -49,12 +49,12 @@ public class User {
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
 	}
-//
-//	public List<Movies> getMovies() {
-//		return movies;
-//	}
-//
-//	public void setMovies(List<Movies> movies) {
-//		this.movies = movies;
-//	}
+
+	public List<Movie> getMovies() {
+		return movies;
+	}
+
+	public void setMovies(List<Movie> movies) {
+		this.movies = movies;
+	}
 }

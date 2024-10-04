@@ -1,9 +1,6 @@
 package com.movielist.movielist;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
+import jakarta.persistence.*;
 //^^ don't think all of these are needed but i'm getting errors
 
 
@@ -15,17 +12,21 @@ public class Movie {
 	private Long Movieid;
 	private String moviename, director, dateofrelease;
 
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "user")
+	private User user;
 	
 	public Movie() {
 		super();
 	}
 	
 	
-	public Movie(String moviename, String director, String dateofrelease) {
+	public Movie(String moviename, String director, String dateofrelease, User user) {
 	super();
 		this.moviename = moviename;
 		this.director = director;
 		this.dateofrelease = dateofrelease;
+		this.user = user;
 	}
 	
 

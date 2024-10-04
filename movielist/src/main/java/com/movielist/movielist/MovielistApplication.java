@@ -32,15 +32,21 @@ public class MovielistApplication implements CommandLineRunner {
 	
 	@Override
 	public void run(String... args) throws Exception{
-		
-		 repository.save(new Movie("Inception", "Christopher Nolan", "2010-07-16"));
-		 repository.save(new Movie("The Matrix", "Lana Wachowski, Lilly Wachowski", "1999-03-31"));
-		 repository.save(new Movie("The Godfather", "Francis Ford Coppola", "1972-03-24"));
 
-		 userRepository.save(new User("John", "Smith"));
-		 userRepository.save(new User("Jane", "Doe"));
-		 userRepository.save(new User("Bob", "Smith"));
-		 userRepository.save(new User("Jack", "Smith"));
+		User user1 = new User("John", "Smith");
+		User user2 = new User("Jane", "Doe");
+		User user3 = new User("John", "Smith");
+		User user4 = new User("John", "Smith");
+
+		userRepository.save(user1);
+		userRepository.save(user2);
+		userRepository.save(user3);
+		userRepository.save(user4);
+		
+		repository.save(new Movie("Inception", "Christopher Nolan", "2010-07-16", user1));
+		repository.save(new Movie("The Matrix", "Lana Wachowski, Lilly Wachowski", "1999-03-31", user2));
+		repository.save(new Movie("The Godfather", "Francis Ford Coppola", "1972-03-24", user3));
+		repository.save(new Movie("Jurassic Park", "Steven Spielberg", "1993-06-11", user1));
 		 
 		 //Fetch all movies and log to console
 		 for (Movie movies : repository.findAll()) {
