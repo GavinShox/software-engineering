@@ -17,7 +17,7 @@ public class MoviesController {
 	}
 
 	@GetMapping("/movies")
-	public Iterable<Movies> getCars()
+	public Iterable<Movies> getMovies()
 	{
 		return repository.findAll();
 	}
