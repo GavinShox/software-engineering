@@ -3,7 +3,7 @@ package com.movielist.web;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.movielist.movielist.Movies;
+import com.movielist.movielist.Movie;
 import com.movielist.movielist.MoviesRepository;
 
 @RestController
@@ -17,7 +17,7 @@ public class MoviesController {
 	}
 
 	@GetMapping("/movies")
-	public Iterable<Movies> getMovies()
+	public Iterable<Movie> getMovie()
 	{
 		return repository.findAll();
 	}

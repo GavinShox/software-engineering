@@ -8,7 +8,7 @@ import jakarta.persistence.GenerationType;
 
 
 @Entity
-public class Movies {
+public class Movie {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -16,12 +16,12 @@ public class Movies {
 	private String moviename, director, dateofrelease;
 
 	
-	public Movies() {
+	public Movie() {
 		super();
 	}
 	
 	
-	public Movies(String moviename, String director, String dateofrelease) {
+	public Movie(String moviename, String director, String dateofrelease) {
 	super();
 		this.moviename = moviename;
 		this.director = director;
