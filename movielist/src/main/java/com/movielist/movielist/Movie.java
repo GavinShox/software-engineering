@@ -13,7 +13,7 @@ public class Movie {
 	private String moviename, director, dateofrelease;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "user")
+	@JoinColumn(name = "users")
 	private User user;
 	
 	public Movie() {

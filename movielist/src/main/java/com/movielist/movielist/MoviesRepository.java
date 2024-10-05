@@ -1,7 +1,17 @@
 package com.movielist.movielist;
 
-import org.springframework.data.repository.CrudRepository;
+import java.util.List;
 
-public interface MoviesRepository extends CrudRepository<Movie, Long>{
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+
+@RepositoryRestResource
+public interface MoviesRepository extends CrudRepository<Movie, Long>
+{
+	List<Movie> findByMoviename(String moviename);
+	
+	List<Movie> findByDirector(String director);
+	
+	List<Movie> findByDateofrelease(String moviename);
 
 }

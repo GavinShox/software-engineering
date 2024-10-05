@@ -4,9 +4,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-//not sure if imports are needed
-import com.movielist.movielist.Movie;
-import com.movielist.movielist.MoviesRepository;
+
+
 
 import org.springframework.boot.CommandLineRunner;
 
