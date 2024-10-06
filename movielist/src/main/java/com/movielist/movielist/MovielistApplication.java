@@ -34,8 +34,8 @@ public class MovielistApplication implements CommandLineRunner {
 
 		User user1 = new User("John", "Smith");
 		User user2 = new User("Jane", "Doe");
-		User user3 = new User("John", "Smith");
-		User user4 = new User("John", "Smith");
+		User user3 = new User("Abby", "Kearn");
+		User user4 = new User("Jim", "Stevens");
 
 		userRepository.save(user1);
 		userRepository.save(user2);
