@@ -5,7 +5,7 @@ function DisplayComponent() {
   const { profile } = useContext(AppContext); // access profile from context
 
   return (
-    <div>
+    <div className='fieldData'>
       <h2>Profile Details</h2>
       <p>Name: {profile.name}</p>
       <p>Email: {profile.email}</p>

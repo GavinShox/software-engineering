@@ -18,8 +18,8 @@ function FormComponent() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
+    <form onSubmit={handleSubmit} className="container">
+      <div className="field">
         <label>Name: </label>
         <input
           type="text"
@@ -28,7 +28,7 @@ function FormComponent() {
           onChange={handleChange}
         />
       </div>
-      <div>
+      <div className="field">
         <label>Email: </label>
         <input
           type="email"
@@ -37,7 +37,7 @@ function FormComponent() {
           onChange={handleChange}
         />
       </div>
-      <div>
+      <div className="field">
         <label>Age: </label>
         <input
           type="number"
@@ -46,7 +46,7 @@ function FormComponent() {
           onChange={handleChange}
         />
       </div>
-      <button type="submit">Save Profile</button>
+      <button type="submit" className="button">Save Profile</button>
     </form>
   );
 }

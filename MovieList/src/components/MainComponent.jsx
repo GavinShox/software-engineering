@@ -3,7 +3,7 @@ import DisplayComponent from './DisplayComponent';
 
 function MainComponent() {
   return (
-    <div>
+    <div className='mainTitle'>
       <h1>Main Component</h1>
       <FormComponent />
       <DisplayComponent />
