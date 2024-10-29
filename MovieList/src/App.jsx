@@ -1,10 +1,16 @@
 import { AppProvider } from './context/AppContext';
 import MainComponent from './components/MainComponent'; // Import MainComponent
+import MoviesTable from './components/MoviesTable';
 
 function App() {
   return (
     <AppProvider>
-      <MainComponent />
+      <div className="mainComponent">
+        <MainComponent />
+      </div>
+      <div className="moviesTable">
+        <MoviesTable />
+      </div>
     </AppProvider>
   );
 }

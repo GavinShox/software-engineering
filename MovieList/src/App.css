@@ -41,4 +41,20 @@
   color: #888;
 }
 
+#moviesTable, #moviesTable th, #moviesTable td {
+  color: white !important;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px; /* Adds spacing above the table */
+}
+
+.mainComponent, .moviesTable {
+  margin-bottom: 20px; /* Space between MainComponent and MoviesTable */
+}
+
+
 
