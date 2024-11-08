@@ -40,5 +40,30 @@ public class MoviesController {
 		return repository.findByDirector(director);
 		
 	}
+	
+	@PostMapping("/movies")
+	public Movie createMovie(@RequestBody Movie newMovie) {
+	    return repository.save(newMovie);
+	}
+	
+	@PutMapping("/movies/{id}")
+	public Movie updateMovie(@PathVariable Long id, @RequestBody Movie updatedMovie) {
+	    return repository.findById(id)
+	        .map(movie -> {
+	            movie.setMoviename(updatedMovie.getMoviename());
+	            movie.setDirector(updatedMovie.getDirector());
+	            movie.setDateofrelease(updatedMovie.getDateofrelease());
+	            return repository.save(movie);
+	        })
+	        .orElseThrow(() -> new ResourceNotFoundException("Movie not found with ID: " + id));
+	}
+	
+	@DeleteMapping("/movies/{id}")
+	public void deleteMovie(@PathVariable Long id) {
+	    repository.deleteById(id);
+	}
+	
+	
+	
     
 }
