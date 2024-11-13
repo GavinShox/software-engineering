@@ -9,12 +9,12 @@ import java.util.List;
 public class User {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Long userid;
+	private Long Userid;
 
 	private String firstname;
 	private String lastname;
 
-	@JsonIgnore
+	//@JsonIgnore
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
 	private List<Movie> movies;
 
@@ -27,11 +27,11 @@ public class User {
 	}
 
 	public long getUserid() {
-		return userid;
+		return Userid;
 	}
 
 	public void setUserid(long userid) {
-		this.userid = userid;
+		this.Userid = userid;
 	}
 
 	public String getFirstname() {
